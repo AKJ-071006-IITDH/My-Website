@@ -15,7 +15,7 @@ const SITE_DATA = {
     location: "Dharwad, Karnataka · Home: Bokaro Steel City, India",
     // Path to your photo. Just replace assets/profile.jpg with a new
     // file of the same name, or change this string to point elsewhere.
-    photo: "assets/profile.jpg",
+    photo: "profile.jpg",
     // The paragraph shown as your "Abstract" in the hero section.
     abstract:
       "I'm a B.Tech student in Mathematics and Computing at IIT Dharwad, " +
