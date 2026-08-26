@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aayush Kumar Jha</title>
+<meta name="description" content="Portfolio of Aayush Kumar Jha — B.Tech Mathematics & Computing, IIT Dharwad.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <a href="#top" class="nav__mark">AKJ</a>
+  <nav class="nav__links" aria-label="Section navigation">
+    <a href="#about">Abstract</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO / ABSTRACT ============ -->
+  <section class="hero" id="about">
+    <div class="hero__figure">
+      <div class="hero__photo-frame">
+        <img id="profilePhoto" src="" alt="Portrait" class="hero__photo">
+      </div>
+      <p class="hero__location" id="profileLocation"></p>
+    </div>
+
+    <div class="hero__text">
+      <p class="eyebrow">Portfolio &mdash; Working Draft</p>
+      <h1 class="hero__name" id="profileName"></h1>
+      <p class="hero__tagline" id="profileTagline"></p>
+
+      <div class="abstract-block">
+        <span class="abstract-block__label">Abstract</span>
+        <p id="profileAbstract"></p>
+      </div>
+
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">View projects</a>
+        <a href="#contact" class="btn btn--ghost">Get in touch</a>
+        <a href="#" id="resumeBtn" class="btn btn--ghost" style="display:none;" target="_blank" rel="noopener">Download resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section" id="skills">
+    <h2 class="section__heading"><span class="section__num">§02</span> Skills</h2>
+    <div class="skills" id="skillsList"></div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section" id="projects">
+    <h2 class="section__heading"><span class="section__num">§03</span> Projects</h2>
+    <p class="section__note">Pulled from my GitHub &mdash; updated as I build.</p>
+    <div class="projects" id="projectsList"></div>
+  </section>
+
+  <!-- ============ EXPERIENCE + EDUCATION ============ -->
+  <section class="section" id="experience">
+    <h2 class="section__heading"><span class="section__num">§04</span> Experience &amp; Education</h2>
+    <div class="timeline-cols">
+      <div>
+        <h3 class="timeline-cols__title">Experience</h3>
+        <ol class="timeline" id="experienceList"></ol>
+      </div>
+      <div>
+        <h3 class="timeline-cols__title">Education</h3>
+        <ol class="timeline" id="educationList"></ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section section--contact" id="contact">
+    <h2 class="section__heading"><span class="section__num">§05</span> Contact</h2>
+    <p class="section__note">Reach me through any of these &mdash; I check email and LinkedIn most often.</p>
+    <div class="links" id="linksList"></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Designed &amp; built by <span id="footerName"></span>. Last updated <span id="footerDate"></span>.</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
