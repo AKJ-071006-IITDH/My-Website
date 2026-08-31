@@ -9,106 +9,115 @@ const SITE_DATA = {
   // ---- 1. Profile -------------------------------------------------
   profile: {
     name: "Aayush Kumar Jha",
-    // Short line shown right under your name in the hero.
-    tagline: "B.Tech, Mathematics & Computing — IIT Dharwad",
-    // Where you're based right now.
+    tagline: "B.Tech, Mathematics & Computing — IIT Dharwad · CGPA 9.48",
     location: "Dharwad, Karnataka · Home: Bokaro Steel City, India",
-    // Path to your photo. Just replace assets/profile.jpg with a new
-    // file of the same name, or change this string to point elsewhere.
     photo: "profile.jpg",
-    // The paragraph shown as your "Abstract" in the hero section.
     abstract:
-      "I'm a B.Tech student in Mathematics and Computing at IIT Dharwad, " +
-      "fascinated by the mathematics underneath machine learning and AI. " +
-      "I've done research work in quantum cybersecurity and high-performance " +
-      "computing, and I'm currently upskilling in applied machine learning " +
-      "and high-fidelity mathematical modelling, alongside strengthening my " +
-      "core CS fundamentals in computer architecture and operating systems.",
+      "I'm a pre-final year B.Tech student in Mathematics and Computing at IIT " +
+      "Dharwad, fascinated by the mathematics underneath machine learning and AI. " +
+      "I've co-authored research on quantum-secured networking presented at IEEE " +
+      "HiPC 2025, and I currently build end-to-end ML systems spanning computer " +
+      "vision, low-resource NLP, and satellite image super-resolution — alongside " +
+      "strengthening my core CS fundamentals in computer architecture and " +
+      "operating systems.",
     // Optional — link to a PDF resume. Leave as "" to hide the button.
     resumeUrl: "",
   },
 
   // ---- 2. Contact links --------------------------------------------
-  // Add or remove entries freely — the icon key must match one of the
-  // names in the ICONS object at the bottom of script.js.
   links: [
-    { icon: "github",   label: "GitHub",   value: "github.com/AKJ-071006-IITDH",              url: "https://github.com/AKJ-071006-IITDH" },
-    { icon: "linkedin", label: "LinkedIn", value: "linkedin.com/in/aayushkumar-jha-ab3b28306", url: "https://www.linkedin.com/in/aayushkumar-jha-ab3b28306" },
-    { icon: "leetcode", label: "LeetCode", value: "leetcode.com/u/AKJ071006IITDH",             url: "https://leetcode.com/u/AKJ071006IITDH/" },
-    { icon: "mail",     label: "Email",    value: "aayushkumarjha.071006@gmail.com",           url: "mailto:aayushkumarjha.071006@gmail.com" },
+    { icon: "github",   label: "GitHub",   value: "github.com/AKJ-071006-IITDH",                 url: "https://github.com/AKJ-071006-IITDH" },
+    { icon: "linkedin", label: "LinkedIn", value: "linkedin.com/in/aayush-kumar-jha-ab3b28306",   url: "https://www.linkedin.com/in/aayush-kumar-jha-ab3b28306/" },
+    { icon: "leetcode", label: "LeetCode", value: "leetcode.com/u/AKJ071006IITDH",                url: "https://leetcode.com/u/AKJ071006IITDH/" },
+    { icon: "mail",     label: "Email",    value: "aayushkumarjha.071006@gmail.com",              url: "mailto:aayushkumarjha.071006@gmail.com" },
+    { icon: "mail",     label: "Institute Email", value: "mc24bt004@iitdh.ac.in",                 url: "mailto:mc24bt004@iitdh.ac.in" },
+    { icon: "link",     label: "Phone",    value: "+91 9942685272",                               url: "tel:+919942685272" },
   ],
 
   // ---- 3. Skills ------------------------------------------------
-  // Grouped however you like — add a new group by adding a new object.
   skillGroups: [
     {
-      group: "Core",
-      items: ["Computer Architecture", "Operating Systems", "Data Structures & Algorithms"],
+      group: "Languages",
+      items: ["Java", "C", "Python", "Bash"],
+    },
+    {
+      group: "CS Fundamentals",
+      items: ["Data Structures & Algorithms", "OOP", "Graph Theory", "Computer Architecture", "Operating Systems"],
     },
     {
       group: "AI / ML",
-      items: ["Machine Learning", "Deep Learning", "Artificial Intelligence"],
+      items: ["Machine Learning", "Deep Learning", "Natural Language Processing"],
     },
     {
-      group: "Languages spoken",
-      items: ["English", "Hindi", "Maithili"],
+      group: "Tools & Tech",
+      items: ["Git", "Docker", "VS Code", "LLM API Integration", "LaTeX"],
     },
   ],
 
   // ---- 4. Projects --------------------------------------------------
-  // domain is used as the little tag on each card — reuse the same
-  // string across projects to group them (e.g. "Machine Learning").
   // status: "active" | "complete"
   projects: [
     {
-      title: "A2A_TALENTVector-Core",
+      title: "Satellite Imagery Super-Resolution (SIH 2026)",
       domain: "Machine Learning",
       status: "active",
-      // TODO: replace with a real 1-2 sentence description.
-      description: "Python project — add a short description of what this does and why you built it.",
-      stack: ["Python"],
-      github: "https://github.com/AKJ-071006-IITDH/A2A_TALENTVector-Core",
+      description: "End-to-end 4x super-resolution pipeline for 4-channel (RGB+NIR) Sentinel-2 satellite imagery, using a custom 12-block RRDBNet and PatchGAN discriminator. Eliminated adversarial mode collapse via ESRGAN-style weight interpolation, reaching 36.94 dB PSNR / 0.867 SSIM, and deployed the model through a FastAPI backend with an interactive dashboard.",
+      stack: ["Python", "PyTorch", "FastAPI", "OpenCV", "SQLite"],
+      github: "https://github.com/AKJ-071006-IITDH/SIH26142-satellite-SR",
+      demo: "",
+    },
+    {
+      title: "Underwater Image Enhancement (CNN Autoencoder)",
+      domain: "Computer Vision",
+      status: "complete",
+      description: "A convolutional autoencoder with skip connections that restores color and clarity in underwater images, trained on 712 raw-reference pairs. Reached 18.96 dB mean PSNR and 0.82 mean SSIM on 178 held-out test images with a ~3.5M-parameter model, using AdamW, Huber loss, and a ReduceLROnPlateau scheduler.",
+      stack: ["Python", "TensorFlow", "OpenCV"],
+      github: "https://github.com/AKJ-071006-IITDH/UnderWater-Image-Enhancement-using-CNN",
+      demo: "",
+    },
+    {
+      title: "Low-Resource NMT: English ↔ Manipuri",
+      domain: "NLP",
+      status: "active",
+      description: "Fine-tuned IndicTrans2 and Sarvam models (1.1B/4.3B parameters) for Manipuri using LoRA/DoRA, reaching 51.55 BLEU. Built a full pipeline for data quality analysis, splitting, and multi-metric evaluation, plus back-translation augmentation that expanded training data ~2.8x, and compared Seq2Seq vs CausalLM architectures on an RTX 6000 Ada GPU.",
+      stack: ["Python", "PyTorch", "LoRA/DoRA"],
+      github: "",
       demo: "",
     },
     {
       title: "You_Look_Only_Once_Codebase",
       domain: "Computer Vision",
       status: "active",
-      // TODO: replace with a real 1-2 sentence description.
-      description: "A YOLO-based object detection codebase — describe your implementation, dataset, or results here.",
+      description: "Custom YOLO object detection models engineered and deployed via Python. Manages end-to-end data pipelines with CVAT.ai labeling and Roboflow dataset integration, with models deployed and evaluated locally.",
       stack: ["Python"],
       github: "https://github.com/AKJ-071006-IITDH/You_Look_Only_Once_Codebase",
       demo: "",
     },
     {
-      title: "ToyRISC_Processor_Simulator",
+      title: "ToyRISC Processor Simulator",
       domain: "Computer Architecture",
       status: "complete",
-      // TODO: replace with a real 1-2 sentence description.
-      description: "A simulator for a toy RISC processor — describe the instruction set, pipeline stages, or design goals.",
+      description: "A cycle-accurate simulator for a custom ToyRISC instruction set, built as a multi-lab Computer Architecture project. Implements instruction fetch-decode-execute, a register file, and memory access, with the ISA progressively extended across six iterations and validated against expected register/memory states.",
       stack: ["Java"],
       github: "https://github.com/AKJ-071006-IITDH/ToyRISC_Processor_Simulator",
+      demo: "",
+    },
+    {
+      title: "A2A TALENTVector",
+      domain: "AI Agents",
+      status: "complete",
+      description: "An autonomous talent-sourcing system built at the Nasiko AI Agent Buildathon, using the Google A2A Protocol and JSON-RPC 2.0 with OAuth-based email and profile access. Includes a log-normalized multi-metric scoring engine to rank developers and an automated GPT-4o data parsing pipeline.",
+      stack: ["Python", "GPT-4o", "OAuth"],
+      github: "https://github.com/AKJ-071006-IITDH/A2A_TALENTVector-Core",
       demo: "",
     },
     {
       title: "Data_Structures_and_Algorithms_Codebase_Java",
       domain: "DSA",
       status: "active",
-      // TODO: replace with a real 1-2 sentence description.
-      description: "A growing collection of data structure and algorithm implementations in Java.",
+      description: "A complete, self-authored repository of fundamental and advanced data structure and algorithm implementations, written entirely in Java.",
       stack: ["Java"],
       github: "https://github.com/AKJ-071006-IITDH/Data_Structures_and_Algorithms_Codebase_Java",
-      demo: "",
-    },
-    {
-      title: "Research-Works",
-      domain: "Research",
-      status: "active",
-      // TODO: replace with a real 1-2 sentence description — e.g. your
-      // quantum cybersecurity / HPC research.
-      description: "Notes and work from ongoing research — describe the topic, e.g. quantum cybersecurity or high-performance computing.",
-      stack: [],
-      github: "https://github.com/AKJ-071006-IITDH/Research-Works",
       demo: "",
     },
 
@@ -134,14 +143,14 @@ const SITE_DATA = {
       org: "Student Mentorship Program, IIT Dharwad",
       period: "Jul 2025 — May 2026",
       location: "Dharwad",
-      description: "",
+      description: "Provided academic guidance to first-year students and conducted regular group sessions to help them transition to college life.",
     },
     {
-      role: "Club Member — Software & Mechanical Team",
+      role: "Member — Software & Mechanical Team",
       org: "Robotics Club, IIT Dharwad",
       period: "Sep 2024 — May 2026",
       location: "Dharwad",
-      description: "Working on a SLAM robot.",
+      description: "Collaborating with a multidisciplinary team to design a SLAM (Simultaneous Localization and Mapping) robot, contributing to both software and mechanical design for autonomous navigation.",
     },
   ],
 
@@ -149,7 +158,7 @@ const SITE_DATA = {
   education: [
     {
       school: "Indian Institute of Technology, Dharwad",
-      degree: "B.Tech, Mathematics and Computing",
+      degree: "B.Tech, Mathematics and Computing — CGPA 9.48",
       period: "Aug 2024 — Jul 2028",
     },
     {
@@ -157,5 +166,38 @@ const SITE_DATA = {
       degree: "",
       period: "",
     },
+  ],
+
+  // ---- 7. Publications ------------------------------------------------
+  publications: [
+    {
+      title: "Cryptographic Collapse Forecasting: A Strategic Shift to Quantum Security",
+      role: "Co-Author",
+      venue: "32nd IEEE International Conference on High Performance Computing, Data, and Analytics (HiPC 2025)",
+      period: "Sep — Dec 2025",
+      description: "Collaborated with FutureG Labs, IIT Dharwad on quantum-secured networking within O-RAN architectures. Presented findings via a poster presentation to international domain experts in Hyderabad.",
+      url: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11459252",
+    },
+
+    /* Copy this block to add a new publication:
+
+    {
+      title: "Paper title",
+      role: "Co-Author",            // or "Author", "Lead Author", etc.
+      venue: "Conference or journal name",
+      period: "Month Year",
+      description: "One or two sentences on the work.",
+      url: "https://link-to-paper",  // or "" to hide the link
+    },
+
+    */
+  ],
+
+  // ---- 8. Achievements --------------------------------------------------
+  achievements: [
+    "Maintained a 9.48 CGPA in the Mathematics and Computing department at IIT Dharwad.",
+    "Built and shipped an autonomous agent at the Nasiko AI Agent Buildathon.",
+
+    // Add a new one anytime — just add another quoted line above, separated by a comma.
   ],
 };
