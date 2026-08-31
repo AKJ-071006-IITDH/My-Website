@@ -112,6 +112,36 @@ function renderTimeline(listId, items, isExperience) {
   });
 }
 
+function renderPublications() {
+  const wrap = document.getElementById("publicationsList");
+  (SITE_DATA.publications || []).forEach((pub) => {
+    const card = el("article", "pub-card reveal");
+    card.appendChild(el("h3", "pub-card__title", pub.title));
+
+    const meta = el("p", "pub-card__meta");
+    if (pub.role) meta.appendChild(el("span", "role", pub.role));
+    meta.appendChild(document.createTextNode([pub.venue, pub.period].filter(Boolean).join(" · ")));
+    card.appendChild(meta);
+
+    if (pub.description) card.appendChild(el("p", "pub-card__desc", pub.description));
+
+    if (pub.url) {
+      const a = el("a", "pub-card__link", "Read the paper");
+      a.href = pub.url; a.target = "_blank"; a.rel = "noopener";
+      card.appendChild(a);
+    }
+
+    wrap.appendChild(card);
+  });
+}
+
+function renderAchievements() {
+  const wrap = document.getElementById("achievementsList");
+  (SITE_DATA.achievements || []).forEach((text) => {
+    wrap.appendChild(el("li", "reveal", text));
+  });
+}
+
 function renderLinks() {
   const wrap = document.getElementById("linksList");
   SITE_DATA.links.forEach((link) => {
@@ -173,6 +203,8 @@ function init() {
   renderProjects();
   renderTimeline("experienceList", SITE_DATA.experience, true);
   renderTimeline("educationList", SITE_DATA.education, false);
+  renderPublications();
+  renderAchievements();
   renderLinks();
   setupNavToggle();
   setupScrollReveal();
