@@ -21,7 +21,7 @@ const SITE_DATA = {
       "strengthening my core CS fundamentals in computer architecture and " +
       "operating systems.",
     // Optional — link to a PDF resume. Leave as "" to hide the button.
-    resumeUrl: "",
+    resumeUrl: "Resume_1Sep.pdf",
   },
 
   // ---- 2. Contact links --------------------------------------------
