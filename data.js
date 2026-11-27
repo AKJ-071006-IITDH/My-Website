@@ -42,7 +42,7 @@ const SITE_DATA = {
     },
     {
       group: "CS Fundamentals",
-      items: ["Data Structures & Algorithms", "OOP", "Graph Theory", "Computer Architecture", "Operating Systems"],
+      items: ["Computer Architecture", "Operating Systems", "Data Structures & Algorithms", "OOPs", "Graph Theory"],
     },
     {
       group: "AI / ML",
@@ -57,6 +57,15 @@ const SITE_DATA = {
   // ---- 4. Projects --------------------------------------------------
   // status: "active" | "complete"
   projects: [
+     {
+      title: "Multilingual Legal Article Retrieval via Multi-Teacher Knowledge Distillation",
+      domain: "Research",
+      status: "active",
+      description: "Academic research project at IIT Dharwad: a multi-teacher knowledge distillation framework that compresses six language-specific legal retrievers (Dutch, English, Finnish, French, Italian, Spanish) into a single multilingual mBERT student for statutory article retrieval over a 27,942-article corpus. Re-engineered the distillation pipeline with gradient caching and length-bucketed batching, cutting peak GPU memory from 140+ GB to 24 GB and step time from 5 minutes to 4 seconds on an NVIDIA H200. Benchmarked six baselines (MILCO, MIMO, Relational KD, Kendall's τ KD, ColBERT, jina-embeddings-v4); the student retains ~97% of the teachers' Recall@500 with one model instead of six.",
+      stack: ["PyTorch", "Sentence-Transformers", "mBERT", "Knowledge Distillation"],
+      github: "",
+      demo: "",
+    },
     {
       title: "Satellite Imagery Super-Resolution (SIH 2026)",
       domain: "Machine Learning",
@@ -114,7 +123,7 @@ const SITE_DATA = {
     {
       title: "Data_Structures_and_Algorithms_Codebase_Java",
       domain: "DSA",
-      status: "active",
+      status: "complete",
       description: "A complete, self-authored repository of fundamental and advanced data structure and algorithm implementations, written entirely in Java.",
       stack: ["Java"],
       github: "https://github.com/AKJ-071006-IITDH/Data_Structures_and_Algorithms_Codebase_Java",
